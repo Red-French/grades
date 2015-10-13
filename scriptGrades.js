@@ -8,9 +8,17 @@ var b = 0;
 var c = 0;
 var d = 0;
 var f = 0;
+var highScore = 0
+var lowScore = 100;
 
 for (var i = 0; i <= scores.length; i ++) {
 	var score = scores[i];
+	if (score < lowScore) {
+		lowScore = score;
+	}
+	if (score > highScore) {
+		highScore = score;
+	}
 
 // console.log(score);
 
@@ -40,3 +48,5 @@ console.log("# of B's = ", b);
 console.log("# of C's = ", c);
 console.log("# of D's = ", d);
 console.log("# of F's = ", f);
+console.log('lowScore = ', lowScore);
+console.log('highScore = ', highScore);
